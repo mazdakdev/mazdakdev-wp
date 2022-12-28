@@ -10,8 +10,7 @@
 get_header();
 ?>
 
-	<section id="primary">
-		<main id="main">
+	  <div class="w-full md:mt-8 mt-16 prose-dark max-w-none">
 
 			<?php
 			/* Start the Loop */
@@ -33,17 +32,15 @@ get_header();
 					);
 				}
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) {
-					comments_template();
-				}
+		
 
 				// End the loop.
 			endwhile;
 			?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+</div>
 
-<?php
-get_footer();
+
+<?php get_footer(); ?>
+
+

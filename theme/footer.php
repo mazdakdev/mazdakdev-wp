@@ -11,8 +11,9 @@
 
 ?>
 
-
-	<footer class="flex flex-col justify-center items-start max-w-2xl mx-auto w-full mb-8">
+ 
+	</div>
+		<footer class="flex flex-col justify-center items-start max-w-2xl mx-auto w-full mb-8 mt-8">
 		<hr class="w-full border-1 border-gray-800 mb-8" />
 
 		<div class="flex m-auto mt-8 space-x-6 text-gray-200 lg:mt-0   ">       
@@ -67,8 +68,6 @@
 				</a>
 		</div>
     </footer>
- 
-	</div>
 </div>
 <?php wp_footer(); ?>
 </body>

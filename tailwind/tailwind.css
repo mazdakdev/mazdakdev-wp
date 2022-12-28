@@ -36,7 +36,7 @@
 @import "tailwindcss/utilities";
 @import "./custom/utilities.css";
 
-body {
+#body {
     @apply bg-gray-900;
 }
 

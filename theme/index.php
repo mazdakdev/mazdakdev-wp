@@ -44,31 +44,66 @@ get_header();
                 <h3 class="font-bold text-3xl md:text-start text-center  md:text-4xl tracking-tight text-white">
                     Featured Posts
                 </h3>
-              
+
+                <?php
+                    $args = array('numberposet' => 3);
+                    $posts = get_posts($args);
+                ?>
 
                 <div class="flex gap-6 flex-col md:flex-row mt-6 " style="padding:1px;">
-                    <NuxtLink to="/blog/how-to-use-nmap" class="post-1 md:w-[208px] md:h-[210px] h-40 shadow-sm justify-center items-center  flex p-5 hover:scale-[1.01] " >
-                        <p class="text-white text-xl text-center  md:text-start ">
-                          How to use Nmap in order to scan network
-                        </p>
-                    </NuxtLink>
+                    <?php if(isset($posts[0])){ ?>
+                        <a href="<?php echo 'index.php/'.$posts[0]->post_name;?>" class="post-1 md:w-[208px] md:h-[210px] h-40 shadow-sm justify-center items-center  flex p-5 hover:scale-[1.01] " >
+                            <p class="text-white text-xl text-center  md:text-start ">
+                            <?php echo $posts[0]->post_title?>
+                            </p>
+                        </a>
+                    <?php } 
+                    else{?>
 
-                    <NuxtLink class="post-2  shadow-sm md:w-[208px] md:h-[210px] h-40 justify-center items-center  flex p-5 hover:scale-[1.01]">
+                    <a class="post-1 shadow-sm md:w-[208px] md:h-[210px] h-40 justify-center items-center  flex p-5 hover:scale-[1.01]">
                         <p class="text-gray-400 text-xl  text-center md:text-start  ">
                           Not Available
                         </p>
-                    </NuxtLink>
+                    </a>
+                    <?php }?>
+                    
 
-                    <NuxtLink class="post-3 shadow-sm md:w-[208px] md:h-[210px] h-40 justify-center items-center   flex p-5 hover:scale-[1.01]">
-                        <p class="text-gray-400 text-xl text-center md:text-start ">
-                           Not Available
+                     <?php if(isset($posts[1])){ ?>
+                        <a href="<?php echo 'index.php/'.$posts[1]->post_name;?>" class="post-2 md:w-[208px] md:h-[210px] h-40 shadow-sm justify-center items-center  flex p-5 hover:scale-[1.01] " >
+                            <p class="text-white text-xl text-center  md:text-start ">
+                            <?php echo $posts[1]->post_title?>
+                            </p>
+                        </a>
+                    <?php } 
+                    else{?>
+
+                    <a class="post-2 shadow-sm md:w-[208px] md:h-[210px] h-40 justify-center items-center  flex p-5 hover:scale-[1.01]">
+                        <p class="text-gray-400 text-xl  text-center md:text-start  ">
+                          Not Available
                         </p>
-                    </NuxtLink>
+                    </a>
+                    <?php }?>
+
+                       <?php if(isset($posts[2])){ ?>
+                        <a href="<?php echo 'index.php/'.$posts[2]->post_name;?>" class="post-3 md:w-[208px] md:h-[210px] h-40 shadow-sm justify-center items-center  flex p-5 hover:scale-[1.01] " >
+                            <p class="text-white text-xl text-center  md:text-start ">
+                            <?php echo $posts[2]->post_title?>
+                            </p>
+                        </a>
+                    <?php } 
+                    else{?>
+
+                    <a class="post-3 shadow-sm md:w-[208px] md:h-[210px] h-40 justify-center items-center  flex p-5 hover:scale-[1.01]">
+                        <p class="text-gray-400 text-xl  text-center md:text-start  ">
+                          Not Available
+                        </p>
+                    </a>
+                    <?php }?>
 
                     
                 </div>
 
-                <NuxtLink to="/blog" class="flex mt-8 items-start-start justify-start  text-gray-400 leading-7 rounded-lg hover:text-gray-200 transition-all h-6">
+                <a href="/blog" class="flex mt-8 items-start-start justify-start  text-gray-400 leading-7 rounded-lg hover:text-gray-200 transition-all h-6">
                     Read all posts
 
                     <svg
@@ -87,7 +122,7 @@ get_header();
                     />
 
                     </svg>
-                </NuxtLink>
+                </a>
             </section>
     
             
@@ -112,11 +147,6 @@ get_header();
 
             </section>
 
-    
-
-
-
-    
             <section>
                     
                 <h3 class="font-bold text-3xl md:text-start text-center md:text-4xl tracking-tight mt-16 text-white">

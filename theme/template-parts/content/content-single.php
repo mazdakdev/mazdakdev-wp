@@ -11,19 +11,17 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	<header class="entry-header ">
+		<h1 class="text-white md:text-5xl text-4xl "><strong><?php the_title(); ?></strong></h1>
+		<div class="flex flex-row  mt-8">
+			<img alt="Mazdak Pakaghideh" src="http://127.0.0.1:3000/assets/images/2.jpeg" class="rounded-full" loading="lazy" width="24" height="24">
+		
+			<p class="ml-2 text-sm text-gray-300">Mazdak Pakaghideh / <?php the_date(); ?></p>
+		</div> 
+	</header>
 
-		<?php if ( ! is_page() ) : ?>
-			<div class="entry-meta">
-				<?php mazdakdev_entry_meta(); ?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
 
-	<?php mazdakdev_post_thumbnail(); ?>
-
-	<div class="entry-content prose">
+	<div class="entry-content prose mt-8">
 		<?php
 		the_content(
 			sprintf(
@@ -47,10 +45,6 @@
 			)
 		);
 		?>
-	</div><!-- .entry-content -->
+	</div>
 
-	<footer class="entry-footer">
-		<?php mazdakdev_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-
-</article><!-- #post-${ID} -->
+</article>
