@@ -115,7 +115,8 @@ add_action( 'widgets_init', 'mazdakdev_widgets_init' );
  */
 function mazdakdev_scripts() {
 	wp_enqueue_style( 'mazdakdev-style', get_stylesheet_uri(), array(), MAZDAKDEV_VERSION );
-	wp_enqueue_script( 'mazdakdev-script', get_template_directory_uri() . '/js/script.min.js', array(), MAZDAKDEV_VERSION, true );
+	wp_register_script('mazdakdev-script',get_template_directory_uri() . "/js/script.min.js", array(''),'1.1', true);
+	wp_enqueue_script('mazdakdev-script');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

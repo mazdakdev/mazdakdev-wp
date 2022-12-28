@@ -35,3 +35,59 @@
  */
 @import "tailwindcss/utilities";
 @import "./custom/utilities.css";
+
+body {
+    @apply bg-gray-900;
+}
+
+.social-icon {
+    width: 23px;
+    height: 25px;
+}
+
+.post-1 {
+
+    background: -moz-linear-gradient(315deg, #D8B4FE 0%, #818CF8 74%);
+    background: -webkit-linear-gradient(315deg, #D8B4FE 0%, #818CF8 74%);
+    -moz-background-origin: border;
+    background-origin: border-box;
+    border: 4px solid transparent;
+    border-radius: 20px;
+    box-shadow:
+        inset -999px 0 0 #111827;
+}
+
+
+.post-2 {
+
+    background: -moz-linear-gradient(315deg, #6EE7B7 0%, #9333EA 74%);
+    background: -webkit-linear-gradient(315deg, #6EE7B7 0%, #9333EA 74%);
+    -moz-background-origin: border;
+    background-origin: border-box;
+    border: 4px solid transparent;
+    border-radius: 20px;
+    box-shadow:
+        inset -999px 0 0 #111827;
+}
+
+.post-3 {
+
+    background: -moz-linear-gradient(315deg, #FDE68A 0%, #FECACA 74%);
+    background: -webkit-linear-gradient(315deg, #FDE68A 0%, #FECACA 74%);
+    -moz-background-origin: border;
+    background-origin: border-box;
+    border: 4px solid transparent;
+    border-radius: 20px;
+    box-shadow: inset -999px 0 0 #111827;
+}
+
+.cv {
+
+    border: 1px solid transparent;
+    border-radius: 49px;
+    background: -moz-linear-gradient(180deg, #0BFFD3 0%, #305C9D 100%);
+    background: -webkit-linear-gradient(180deg, #0BFFD3 0%, #305C9D 100%);
+    -moz-background-origin: border;
+    background-origin: border-box;
+    box-shadow: inset -999px 0 0 #111827;
+}
