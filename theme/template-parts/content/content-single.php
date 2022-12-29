@@ -14,7 +14,7 @@
 	<header class="entry-header ">
 		<h1 class="text-white md:text-5xl text-4xl "><strong><?php the_title(); ?></strong></h1>
 		<div class="flex flex-row  mt-8">
-			<img alt="Mazdak Pakaghideh" src="http://127.0.0.1:3000/assets/images/2.jpeg" class="rounded-full" loading="lazy" width="24" height="24">
+			<img alt="Mazdak Pakaghideh" src="http://127.0.0.1:3000/assets/images/2.jpeg" class="rounded-full md:w-[24px] md:h-[24px] w-[20px] h-[20px]"   loading="lazy" >
 		
 			<p class="ml-2 text-sm text-gray-300">Mazdak Pakaghideh / <?php the_date(); ?></p>
 		</div> 
@@ -48,3 +48,5 @@
 	</div>
 
 </article>
+
+
