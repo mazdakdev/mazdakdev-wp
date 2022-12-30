@@ -21,7 +21,6 @@ if ( post_password_required() ) {
 ?>
 
 <?php
-	$comments_args = array('class_submit' => 'comment-form ');
-	comment_form($comments_args);
+	comment_form();
 ?>
 

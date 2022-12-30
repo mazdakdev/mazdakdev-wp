@@ -1,7 +1,6 @@
 <?php
 /**
  * Comment template functions
- * Note: this file is useless and it is need to be in the wp-include/comments-template.php 
  *
  * These functions are meant to live inside of the WordPress loop.
  *
@@ -2438,11 +2437,9 @@ function comment_form( $args = array(), $post = null ) {
 		'comment_field'        => sprintf(
 			'<p class="comment-form-comment">%s %s</p>',
 			sprintf(
-				'<label for="comment">%s%s</label>',
-				_x( 'Comment', 'noun' ),
-				$required_indicator
+				'',
 			),
-			'<textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525"' . $required_attribute . '></textarea>'
+			'<div class="divtxtarea"><textarea id="comment" name="comment" class="txtarea" placeholder="Write a comment..." rows="6" maxlength="65525"' . $required_attribute . '></textarea></div>'
 		),
 		'must_log_in'          => sprintf(
 			'<p class="must-log-in">%s</p>',
@@ -2453,18 +2450,7 @@ function comment_form( $args = array(), $post = null ) {
 				wp_login_url( apply_filters( 'the_permalink', get_permalink( $post_id ), $post_id ) )
 			)
 		),
-		'logged_in_as'         => sprintf(
-			'<p class="logged-in-as">%s%s</p>',
-			sprintf(
-				/* translators: 1: User name, 2: Edit user link, 3: Logout URL. */
-				__( 'Logged in as %1$s. <a href="%2$s">Edit your profile</a>. <a href="%3$s">Log out?</a>' ),
-				$user_identity,
-				get_edit_user_link(),
-				/** This filter is documented in wp-includes/link-template.php */
-				wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ), $post_id ) )
-			),
-			$required_text
-		),
+	
 		'comment_notes_before' => sprintf(
 			'<p class="comment-notes">%s%s</p>',
 			sprintf(
@@ -2481,7 +2467,7 @@ function comment_form( $args = array(), $post = null ) {
 		'class_form'           => 'comment-form',
 		'class_submit'         => 'submit',
 		'name_submit'          => 'submit',
-		'title_reply'          => __( 'Leave a Reply' ),
+		'title_reply'          => __( '<h2 class="font-bold text-gray-200 mb-6 txt-dsc">Discussion ('.get_comments_number().')</h2>' ),
 		/* translators: %s: Author of the comment being replied to. */
 		'title_reply_to'       => __( 'Leave a Reply to %s' ),
 		'title_reply_before'   => '<h3 id="reply-title" class="comment-reply-title">',
@@ -2490,8 +2476,8 @@ function comment_form( $args = array(), $post = null ) {
 		'cancel_reply_after'   => '</small>',
 		'cancel_reply_link'    => __( 'Cancel reply' ),
 		'label_submit'         => __( 'Post Comment' ),
-		'submit_button'        => '<input name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s" />',
-		'submit_field'         => '<p class="form-submit">%1$s %2$s</p>',
+		'submit_button'        => '<input name="%1$s" class="post-btn" type="submit" id="%2$s" class="%3$s" value="%4$s" />',
+		'submit_field'         => '<p class="form-submit ">%1$s %2$s</p>',
 		'format'               => 'xhtml',
 	);
 
@@ -2582,8 +2568,7 @@ function comment_form( $args = array(), $post = null ) {
 				 * @param string $user_identity  If the commenter is a registered user,
 				 *                               the display name, blank otherwise.
 				 */
-				echo apply_filters( 'comment_form_logged_in', $args['logged_in_as'], $commenter, $user_identity );
-
+	
 				/**
 				 * Fires after the is_user_logged_in() check in the comment form.
 				 *
