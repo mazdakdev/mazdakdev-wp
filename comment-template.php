@@ -1,6 +1,7 @@
 <?php
 /**
  * Comment template functions
+ * Note: this file is useless and it is need to be in the wp-include/comments-template.php
  *
  * These functions are meant to live inside of the WordPress loop.
  *
@@ -21,6 +22,7 @@
  *                                   Default current comment.
  * @return string The comment author
  */
+
 function get_comment_author( $comment_ID = 0 ) {
 	$comment    = get_comment( $comment_ID );
 	$comment_ID = ! empty( $comment->comment_ID ) ? $comment->comment_ID : $comment_ID;
@@ -2362,66 +2364,46 @@ function comment_form( $args = array(), $post = null ) {
 
 	$fields = array(
 		'author' => sprintf(
-			'<p class="comment-form-author">%s %s</p>',
+			'<div class="flex flex-row"><p class="comment-form-author txt-labels ">%s %s</p>',
 			sprintf(
 				'<label for="author">%s%s</label>',
 				__( 'Name' ),
-				( $req ? $required_indicator : '' )
+				( '' )
 			),
 			sprintf(
-				'<input id="author" name="author" type="text" value="%s" size="30" maxlength="245" autocomplete="name"%s />',
+				'<div class="div-name-input"><input id="author" class="name-input" name="author" type="text" value="%s" size="30" maxlength="245" autocomplete="name"%s /></div></div>',
 				esc_attr( $commenter['comment_author'] ),
 				( $req ? $required_attribute : '' )
 			)
 		),
 		'email'  => sprintf(
-			'<p class="comment-form-email">%s %s</p>',
+			'<div class="flex flex-row"><p class="comment-form-email txt-labels">%s %s</p>',
 			sprintf(
 				'<label for="email">%s%s</label>',
 				__( 'Email' ),
-				( $req ? $required_indicator : '' )
+				('')
 			),
 			sprintf(
-				'<input id="email" name="email" %s value="%s" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email"%s />',
+				'<div class="div-email-input"><input id="email" name="email" class="email-input" %s value="%s" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email"%s /></div></div>',
 				( $html5 ? 'type="email"' : 'type="text"' ),
 				esc_attr( $commenter['comment_author_email'] ),
 				( $req ? $required_attribute : '' )
 			)
 		),
 		'url'    => sprintf(
-			'<p class="comment-form-url">%s %s</p>',
+			'<div class="flex flex-row"><p class="comment-form-url txt-labels">%s %s</p>',
 			sprintf(
 				'<label for="url">%s</label>',
 				__( 'Website' )
 			),
 			sprintf(
-				'<input id="url" name="url" %s value="%s" size="30" maxlength="200" autocomplete="url" />',
+				'<div class="div-web-input"><input id="url" class="email-input" name="url" %s value="%s" size="30" maxlength="200" autocomplete="url" /></div></div>',
 				( $html5 ? 'type="url"' : 'type="text"' ),
 				esc_attr( $commenter['comment_author_url'] )
 			)
 		),
 	);
 
-	if ( has_action( 'set_comment_cookies', 'wp_set_comment_cookies' ) && get_option( 'show_comments_cookies_opt_in' ) ) {
-		$consent = empty( $commenter['comment_author_email'] ) ? '' : $checked_attribute;
-
-		$fields['cookies'] = sprintf(
-			'<p class="comment-form-cookies-consent">%s %s</p>',
-			sprintf(
-				'<input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"%s />',
-				$consent
-			),
-			sprintf(
-				'<label for="wp-comment-cookies-consent">%s</label>',
-				__( 'Save my name, email, and website in this browser for the next time I comment.' )
-			)
-		);
-
-		// Ensure that the passed fields include cookies consent.
-		if ( isset( $args['fields'] ) && ! isset( $args['fields']['cookies'] ) ) {
-			$args['fields']['cookies'] = $fields['cookies'];
-		}
-	}
 
 	/**
 	 * Filters the default comment form fields.
@@ -2452,10 +2434,10 @@ function comment_form( $args = array(), $post = null ) {
 		),
 	
 		'comment_notes_before' => sprintf(
-			'<p class="comment-notes">%s%s</p>',
+			'',
 			sprintf(
 				'<span id="email-notes">%s</span>',
-				__( 'Your email address will not be published.' )
+				__( '' )
 			),
 			$required_text
 		),
