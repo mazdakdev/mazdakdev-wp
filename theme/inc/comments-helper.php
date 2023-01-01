@@ -1,28 +1,28 @@
 <?php
 if( ! function_exists( 'better_commets' ) ):
-function better_commets($comment, $args, $depth) {
+function better_comments($comment, $args, $depth) {
     ?>
-   <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
-    <div class="comment">
-        <div class="img-thumbnail d-none d-sm-block">
-            <?php echo get_avatar($comment,$size='80',$default='http://0.gravatar.com/avatar/36c2a25e62935705c5565ec465c59a70?s=32&d=mm&r=g' ); ?>
+
+
+ 
+    <article id="li-comment-<?php comment_ID() ?>"  class="comments-area p-6 mb-6 ml-6 mt-2 lg:ml-6 text-base bg-white rounded-lg dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><?php echo get_comment_author() ?></p>
+                <p class="text-sm text-gray-600 dark:text-gray-400"><?php printf(/* translators: 1: date and time(s). */ esc_html__('%1$s at %2$s' , '5balloons_theme'), get_comment_date(),  get_comment_time()) ?>
+                </p>
+            </div>
+        </footer>
+        <div id="comment-txt"><?php comment_text() ?></div>
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button"
+                class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+               <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+            </button>
         </div>
-        <div class="comment-block">
-            <div class="comment-arrow"></div>
-                <?php if ($comment->comment_approved == '0') : ?>
-                    <em><?php esc_html_e('Your comment is awaiting moderation.','5balloons_theme') ?></em>
-                    <br />
-                <?php endif; ?>
-                <span class="comment-by">
-                    <strong><?php echo get_comment_author() ?></strong>
-                    <span class="float-right">
-                        <span> <a href="#"><i class="fa fa-reply"></i> <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?></a></span>
-                    </span>
-                </span>
-            <p> <?php comment_text() ?></p>
-            <span class="date float-right"><?php printf(/* translators: 1: date and time(s). */ esc_html__('%1$s at %2$s' , '5balloons_theme'), get_comment_date(),  get_comment_time()) ?></span>
-        </div>
-        </div>
+    </article>
+    
 
 <?php
         }

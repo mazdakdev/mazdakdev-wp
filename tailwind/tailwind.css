@@ -232,3 +232,7 @@
     display: flex;
     flex-direction: row;
 }
+
+#comment-txt > p{
+    @apply text-gray-400;
+}
