@@ -221,6 +221,7 @@
     align-items: center;
     border-radius: 0.5rem;
     cursor: pointer;
+    @apply bg-blue-700
 
 }
 
@@ -235,4 +236,8 @@
 
 #comment-txt > p{
     @apply text-gray-400;
+}
+
+ol > .children{
+    @apply ml-8;
 }

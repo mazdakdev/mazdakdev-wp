@@ -8,7 +8,10 @@ if( post_password_required() ){
 }
 
 ?>
-	<?php comment_form(); ?>
+
+<?php comment_form(); ?>
+
+<hr class="my-8 h-px bg-gray-800 border-0 mt-12">
 
 <div id="comments" class="comments-area">
 	

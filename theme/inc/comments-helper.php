@@ -5,7 +5,7 @@ function better_comments($comment, $args, $depth) {
 
 
  
-    <article id="li-comment-<?php comment_ID() ?>"  class="comments-area p-6 mb-6 ml-6 mt-2 lg:ml-6 text-base bg-white rounded-lg dark:bg-gray-900">
+    <article id="li-comment-<?php comment_ID() ?>"  class="comments-area pl-6 mb-6 mt-12 text-base bg-white rounded-lg dark:bg-gray-900">
         <footer class="flex justify-between items-center mb-2">
             <div class="flex items-center">
                 <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><?php echo get_comment_author() ?></p>
