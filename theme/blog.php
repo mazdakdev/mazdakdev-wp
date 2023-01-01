@@ -14,7 +14,6 @@ get_header();
 <?php 
     $post_query = new WP_Query([
     	'post_type' => 'post',
-    	'posts_per_page' => 3,
     ]);
 
     if($post_query->have_posts() ) {

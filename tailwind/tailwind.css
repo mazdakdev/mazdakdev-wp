@@ -248,3 +248,7 @@ ol > .children{
     @apply h-6;
     @apply rounded-full;
 }
+
+.navigation {
+    display: none;
+}
