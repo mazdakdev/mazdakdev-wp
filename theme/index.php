@@ -134,14 +134,14 @@ get_header();
                 </p>        
                 <div>
                     <p class="text-gray-100 mt-6 md:text-start text-center  ">
-                            It started with love and curiosity in the heart of a smaller version of me.
+                            It started with love, curiosity and of course a lot of questions in the heart of a of me(the little one 😁).
                             I've started this path when I was 10 with c++.
                             To me being a developer represents the power of creation and the technology is the way to transcend our reality.
                     </p>
                     <p class="text-gray-100 mt-6 md:text-start text-center  ">
                         I'm a 16 years old boy from rasht/Iran.
                         a knowledge-seeker person who is in love with
-                        technology, AI and development and learning every thing he possibly could 
+                        technology, AI, development and learning every thing he possibly could,.
                     </p>      
                 </div>
 
