@@ -19,13 +19,13 @@
 	<?php wp_head(); ?>
 </head>
 
-<!-- status mobile -->
 <body id="body">
+	<!-- status mobile -->
 	<div class="flex flex-col justify-center px-8 demo1" id="mobile">
 		<div class="md:hidden ">
 			<div id="burgerBtn" class="mt-6 ml-3" onclick="burgerBtn()" ></div>
 			<!-- nav status -->
-			<ul id="nav"  class="text-gray-400 text-xl ">
+			<ul id="nav"  class="text-gray-400 text-xl hidden">
 				<a href="/"><li class="hover:text-gray-200">Home</li></a>
 				<a href="/blog"><li class="hover:text-gray-200">Blog</li></a>
 				<a href="/snippets"><li class="hover:text-gray-200">Snippets</li></a>
@@ -34,7 +34,7 @@
 			</ul>
 		</div>
 
-		<div class="flex  flex-col justify-center md:items-start items-center max-w-2xl border-gray-700 mx-auto pb-16 " id="mobileBodyContent">
+		<div class="flex flex-col justify-center md:items-start items-center max-w-2xl border-gray-700 mx-auto pb-16 " id="mobileBodyContent">
 			<header>          
 				<nav class="py-7 rounded ">
 					<div class="md:container md:flex md:flex-col md:justify-center md:items-start md:mx-auto">

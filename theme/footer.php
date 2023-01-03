@@ -69,6 +69,32 @@
 		</div>
     </footer>
 </div>
+
 <?php wp_footer(); ?>
+
+<script>
+		
+
+	function burgerBtn(){
+		const status = document.getElementById("mobile");
+		const nav_status = document.getElementById("nav");
+		const body = document.getElementById("body") ;
+		
+		if(status.classList.contains("navigation") == false && nav_status.classList.contains("hidden")){
+			status.classList.add("navigation");
+			nav_status.classList.remove("hidden");
+			body.classList.add("overflow-hidden");
+			
+		}
+		else{
+			status.classList.remove("navigation");
+			nav_status.classList.add("hidden");
+			body.classList.remove("overflow-hidden");
+		}
+		
+	}
+
+
+	</script>
 </body>
 </html>

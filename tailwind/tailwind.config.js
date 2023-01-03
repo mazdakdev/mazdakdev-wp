@@ -30,6 +30,7 @@ module.exports = {
 		preflight: includePreflight,
 	},
 	plugins: [
+		'postcss-import',
 		// Extract colors and widths from `theme.json`.
 		require( '@_tw/themejson' )( require( '../theme/theme.json' ) ),
 

@@ -45,5 +45,6 @@
 		"prod": "npm run production",
 		"zip": "node node_scripts/zip.js mazdakdev",
 		"bundle": "run-s production zip"
-	}
+	},
+	"dependencies": {}
 }
