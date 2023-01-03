@@ -14,7 +14,7 @@
 get_header();
 ?>
 
-      <div class="flex  flex-col-reverse md:flex-row md:items-start items-center animate__animated animate__backInDown md:space-x-10 z-40 mt-8">
+      <div class="flex flex-col-reverse md:flex-row md:items-start items-center animate__animated animate__backInDown md:space-x-10 z-40 mt-8">
                 <div class="flex flex-col  md:items-start md:text-start text-center items-center">
                     <h1 class="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-white">
                         Mazdak Pakaghideh
@@ -38,20 +38,23 @@ get_header();
                         class="rounded-full "
                     />
                 </div>
-            </div>
+        </div>
 
+     
+      
             <section class="animate__animated animate__backInLeft">
                 <h3 class="font-bold text-3xl md:text-start text-center  md:text-4xl tracking-tight text-white">
                     Featured Posts
                 </h3>
-
-                <?php
-                    $args = array('numberposet' => 3);
-                    $posts = get_posts($args);
-                ?>
+              
 
                 <div class="flex gap-6 flex-col md:flex-row mt-6 " style="padding:1px;">
-                    <?php if(isset($posts[0])){ ?>
+                    <?php
+                        $args = array('numberposet' => 3);
+                        $posts = get_posts($args);
+                    ?>
+
+               <?php if(isset($posts[0])){ ?>
                         <a href="<?php echo 'index.php/'.$posts[0]->post_name;?>" class="post-1 md:w-[208px] md:h-[210px] h-40 shadow-sm justify-center items-center  flex p-5 hover:scale-[1.01] " >
                             <p class="text-white text-xl text-center  md:text-start ">
                             <?php echo $posts[0]->post_title?>
@@ -100,7 +103,7 @@ get_header();
                     </a>
                     <?php }?>
 
-                    
+
                 </div>
 
                 <a href="/blog" class="flex mt-8 items-start-start justify-start  text-gray-400 leading-7 rounded-lg hover:text-gray-200 transition-all h-6">
@@ -125,11 +128,9 @@ get_header();
                 </a>
             </section>
     
-            
-
 
             <section>
-                <p class="font-bold text-3xl md:text-start text-center md:text-4xl t    racking-tight mt-16 text-white">
+                <p class="font-bold text-3xl md:text-start text-center md:text-4xl tracking-tight mt-16 text-white">
                         About Me
                 </p>        
                 <div>
@@ -141,7 +142,7 @@ get_header();
                     <p class="text-gray-100 mt-6 md:text-start text-center  ">
                         I'm a 16 years old boy from rasht/Iran.
                         a knowledge-seeker person who is in love with
-                        technology, AI, development and learning every thing he possibly could,.
+                        technology, AI, development and learning every thing he possibly could.
                     </p>      
                 </div>
 
@@ -166,6 +167,5 @@ get_header();
                 </div>
 
             </section>
-        </div>
 
 <?php get_footer()?>

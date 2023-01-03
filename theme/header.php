@@ -34,7 +34,7 @@
 			</ul>
 		</div>
 
-		<div class="flex  flex-col justify-center md:items-start items-start max-w-2xl border-gray-700 mx-auto pb-16 " id="mobileBodyContent">
+		<div class="flex  flex-col justify-center md:items-start items-center max-w-2xl border-gray-700 mx-auto pb-16 " id="mobileBodyContent">
 			<header>          
 				<nav class="py-7 rounded ">
 					<div class="md:container md:flex md:flex-col md:justify-center md:items-start md:mx-auto">
