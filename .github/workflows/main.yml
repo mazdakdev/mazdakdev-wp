@@ -1,0 +1,34 @@
+name: Deploy website on push
+
+on:
+  push:
+    branches:
+      - main
+      
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Get the latest code 
+      uses: actions/checkout@v2
+      
+    - name: install requirements 
+      uses: borales/actions-yarn@v4
+      with:
+        cmd: install
+    
+    - name: build 
+      uses: borales/actions-yarn@v4
+      with:
+        cmd: run bundle
+
+    - name: Sync files 
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      with:
+        server: ${{secrets.FTP_SERVER}}
+        username: ${{secrets.FTP_USER}}
+        password: ${{secrets.FTP_PASS}}
+        local-dir: ./theme/
+        server-dir: public_html/wp-content/themes/mazdakdev/
