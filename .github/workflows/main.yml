@@ -11,25 +11,21 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Get latest code
-    
+    - name: Get the latest code 
       uses: actions/checkout@v2
       
-    - name: action-yarn
-      uses: comchangs/action-yarn@v0.1-beta
-      
-    - name: install requirements
+    - name: install requirements 
       uses: borales/actions-yarn@v4
       with:
         cmd: install
     
-    - name: build
+    - name: build 
       uses: borales/actions-yarn@v4
       with:
         cmd: run bundle
 
-    - name: Sync files
-      uses: SamKirland/FTP-Deploy_Action@4.1.10
+    - name: Sync files 
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
         server: ${{secrets.FTP_SERVER}}
         username: ${{secrets.FTP_USERNAME}}
