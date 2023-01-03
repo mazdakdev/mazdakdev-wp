@@ -23,6 +23,12 @@ jobs:
       uses: borales/actions-yarn@v4
       with:
         cmd: run bundle
+        
+    - name: yarn run prod 
+      uses: borales/actions-yarn@v4
+      with:
+        cmd: run prod
+
 
     - name: Sync files 
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
