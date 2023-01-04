@@ -155,16 +155,16 @@ require get_template_directory() . '/inc/comments-helper.php';
 
 /* Custom Post Type Start */
 function create_posttype() {
-register_post_type( 'snippets',
+register_post_type( 'code-snippets',
 // CPT Options
 array(
 	'labels' => array(
-	'name' => __( 'snippets' ),
+	'name' => __( 'code-snippets' ),
 	'singular_name' => __( 'Snippet' )
 	),
 	'public' => true,
 	'has_archive' => false,
-	'rewrite' => array('slug' => 'snippets'),
+	'rewrite' => array('slug' => 'code-snippets'),
 	)
 );
 }
@@ -173,19 +173,19 @@ add_action( 'init', 'create_posttype' );
 /* Custom Post Type End */
 function snippets_init() {
   $labels = array(
-    'name' => _x('Snippets', 'snippet type general name'),
-    'singular_name' => _x('Snippet', 'snippet type singular name'),
-    'add_new' => _x('Add New', 'Snippet'),
+    'name' => _x('code-snippets', 'snippet type general name'),
+    'singular_name' => _x('code-snippet', 'snippet type singular name'),
+    'add_new' => _x('Add New', 'Snippet_'),
     'add_new_item' => __('Add New Snippet'),
-    'edit_item' => __('Edit Snippet'),
-    'new_item' => __('New Snippet'),
-    'all_items' => __('All Snippet'),
-    'view_item' => __('View Snippet'),
-    'search_items' => __('Search Snippets'),
+    'edit_item' => __('Edit Snippet_'),
+    'new_item' => __('New Snippet_'),
+    'all_items' => __('All Snippet_'),
+    'view_item' => __('View Snippet_'),
+    'search_items' => __('Search Snippets_'),
     'not_found' =>  __('No snippets found'),
     'not_found_in_trash' => __('No snippets found in Trash'), 
     'parent_item_colon' => '',
-    'menu_name' => __('Snippets')
+    'menu_name' => __('Snippets_')
 
   );
   $args = array(
@@ -202,6 +202,7 @@ function snippets_init() {
     'menu_position' => null,
     'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt')
   ); 
-  register_post_type('snippets',$args);
+  register_post_type('code-snippets',$args);
 }
 add_action( 'init', 'snippets_init' );
+

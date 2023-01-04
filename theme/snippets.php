@@ -10,7 +10,7 @@ get_header();
             
       <?php 
         $post_query = new WP_Query([
-            'post_type' => 'snippets',
+            'post_type' => 'code-snippets',
         ]);
 
         if($post_query->have_posts() ) {
