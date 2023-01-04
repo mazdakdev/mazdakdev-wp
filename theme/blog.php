@@ -5,7 +5,7 @@ get_header();
 
 <div class="w-full md:mt-8 mt-16 prose-dark max-w-none text-gray-200">
     <h1 class="text-5xl text-white md:mt-8 mt-16 "><strong>Blog</strong></h1>
-    <h3 class="text-gray-400 mt-4">A Personal Blog about my perception of everything that exists.</h3>
+    <h3 class="text-gray-400 mt-4">A personal blog about my perception of everything that exists.</h3>
             
       
             
