@@ -1,7 +1,7 @@
-mazdakdev
+mazdakdev-wp
 =========
 
-A custom theme based on \_tw
+A custom theme for wordpress based on tailwind created using \_tw
 
 ## Installation
 
