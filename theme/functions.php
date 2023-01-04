@@ -152,3 +152,22 @@ require get_template_directory() . '/inc/template-functions.php';
  * Load Custom Comments Layout file.
  */
 require get_template_directory() . '/inc/comments-helper.php';
+
+/* Custom Post Type Start */
+function create_posttype() {
+register_post_type( 'snippets',
+// CPT Options
+array(
+	'labels' => array(
+	'name' => __( 'snippets' ),
+	'singular_name' => __( 'Snippet' )
+	),
+	'public' => true,
+	'has_archive' => false,
+	'rewrite' => array('slug' => 'snippets'),
+	)
+);
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_posttype' );
+/* Custom Post Type End */
