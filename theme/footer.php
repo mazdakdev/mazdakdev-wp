@@ -17,7 +17,7 @@
 		<hr class="w-full border-1 border-gray-800 mb-8" />
 
 		<div class="flex m-auto mt-8 space-x-6 text-gray-200 lg:mt-0   ">       
-				<a href="mailto:mazdak.software@gmail.com">
+				<a href="mailto:contact@mazdak.dev">
 					<svg xmlns="http://www.w3.org/2000/svg" class="fill-gray-200 w-6 h-6 hover:opacity-75"  viewBox="0 0 512 512">
 						<path
 							fill-rule="evenodd"
@@ -57,7 +57,7 @@
 					</svg>
 				</a>
 			
-				<a href="https://twitter.com/mazdakdev" target="_blank" rel="noreferrer" aria-label="Twitter" class="hover:opacity-75">
+				<a href="https://twitter.com/mazdak1111" target="_blank" rel="noreferrer" aria-label="Twitter" class="hover:opacity-75">
 					<svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" class="w-6 h-6">
 						<path
 							fill-rule="evenodd"
