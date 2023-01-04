@@ -155,16 +155,16 @@ require get_template_directory() . '/inc/comments-helper.php';
 
 /* Custom Post Type Start */
 function create_posttype() {
-register_post_type( 'code-snippets',
+register_post_type( 'snippets',
 // CPT Options
 array(
 	'labels' => array(
-	'name' => __( 'code-snippets' ),
-	'singular_name' => __( 'Snippet' )
+	'name' => __( 'snippets' ),
+	'singular_name' => __( 'snippet' )
 	),
 	'public' => true,
-	'has_archive' => false,
-	'rewrite' => array('slug' => 'code-snippets'),
+	'has_archive' => true,
+	'rewrite' => array('slug' => 'snippets'),
 	)
 );
 }
@@ -173,19 +173,19 @@ add_action( 'init', 'create_posttype' );
 /* Custom Post Type End */
 function snippets_init() {
   $labels = array(
-    'name' => _x('code-snippets', 'snippet type general name'),
-    'singular_name' => _x('code-snippet', 'snippet type singular name'),
-    'add_new' => _x('Add New', 'Snippet_'),
-    'add_new_item' => __('Add New Snippet'),
-    'edit_item' => __('Edit Snippet_'),
-    'new_item' => __('New Snippet_'),
-    'all_items' => __('All Snippet_'),
-    'view_item' => __('View Snippet_'),
-    'search_items' => __('Search Snippets_'),
+    'name' => _x('snippets', 'snippet type general name'),
+    'singular_name' => _x('snippet', 'snippet type singular name'),
+    'add_new' => _x('Add New', 'snippet'),
+    'add_new_item' => __('Add New snippet'),
+    'edit_item' => __('Edit snippet'),
+    'new_item' => __('New snippet'),
+    'all_items' => __('All snippet'),
+    'view_item' => __('View snippet'),
+    'search_items' => __('Search snippets'),
     'not_found' =>  __('No snippets found'),
     'not_found_in_trash' => __('No snippets found in Trash'), 
     'parent_item_colon' => '',
-    'menu_name' => __('Snippets_')
+    'menu_name' => __('snippets')
 
   );
   $args = array(
@@ -202,7 +202,7 @@ function snippets_init() {
     'menu_position' => null,
     'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt')
   ); 
-  register_post_type('code-snippets',$args);
+  register_post_type('snippets',$args);
 }
 add_action( 'init', 'snippets_init' );
 

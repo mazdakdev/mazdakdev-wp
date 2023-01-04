@@ -11,12 +11,12 @@ get_header();
 ?>
 
 <div class="w-full md:mt-8 mt-16 prose-dark max-w-none ">
-		
+
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
-				get_template_part( 'template-parts/content/content', 'single' );
+				get_template_part( 'template-parts/content/content', 'single-snippets' );
 
 				if ( is_singular( 'post' ) ) {
 					// Previous/next post navigation.
@@ -39,14 +39,6 @@ get_header();
 			endwhile;
 			?>
 
-
-
-<?php
-	// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) {
-					comments_template();
-				}
-?>
 
 </div>
 
