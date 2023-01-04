@@ -10,7 +10,7 @@ get_header();
             
       <?php 
         $post_query = new WP_Query([
-            'post_type' => 'post',
+            'post_type' => 'snippets',
         ]);
 
         if($post_query->have_posts() ) {
@@ -19,13 +19,15 @@ get_header();
     ?>
 
     <div class="grid w-full grid-cols-2 gap-4 my-2 mt-8 ">
-        <a class="border border-gray-800 hover:border-gray-700 rounded p-4 w-full bg-gray-900" to="/snippets/django">
-            <img alt="Django" src="~/assets/images/django.png"  class="rounded-full" loading="lazy" width="32" height="32">
-            <h3 class="text-lg font-bold text-left mt-2 text-gray-100">Django</h3>
-            <p class="mt-1 text-gray-400">Send an E-mail</p>
+        <a href="<?php the_permalink(); ?>" class="border border-gray-800 hover:border-gray-700 rounded p-4 w-full bg-gray-900" to="/snippets/django">
+            <img src="<?php the_post_thumbnail_url() ?>"  class="rounded-full" loading="lazy" width="32" height="32">
+            <h3 class="text-lg font-bold text-left mt-2 text-gray-100">  <?php the_excerpt(); ?></h3>
+            <p class="mt-1 text-gray-400">
+                <?php the_title(); ?>
+            </p>
         </a>             
     </div>
-    
+
     <?php
     }
 }
