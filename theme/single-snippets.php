@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-<div class="w-full md:mt-8 mt-16 prose-dark max-w-none ">
+<div class="w-full mt-8 prose-dark max-w-none ">
 
 			<?php
 			/* Start the Loop */

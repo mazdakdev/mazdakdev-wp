@@ -3,7 +3,7 @@
 get_header();
 ?>
 
-<div class="w-full md:mt-8 mt-16 prose-dark max-w-none text-gray-200">
+<div class="w-full mt-8 prose-dark max-w-none text-gray-200">
     <h1 class="md:text-5xl text-4xl text-white md:mt-8 mt-16 "><strong>Code Snippets</strong></h1>
     <h3 class="text-gray-400 mt-4">All of my tricky code snippets, Codes(words) are powerful !
     </h3>

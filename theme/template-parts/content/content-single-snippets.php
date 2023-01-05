@@ -9,7 +9,7 @@
 
 ?> 
 
-<article class="mb-16" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article class="mb-16 " id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<header class="entry-header ">
         <div class="flex w-full justify-between">
