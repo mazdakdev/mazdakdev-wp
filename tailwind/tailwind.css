@@ -101,6 +101,7 @@
     line-height: 1.25rem;
     width: 100%;
     border-width: 0;
+    max-height: 100px;
 }
 
 .txtarea:focus {
