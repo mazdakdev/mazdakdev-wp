@@ -37,4 +37,4 @@ jobs:
         username: ${{secrets.FTP_USER}}
         password: ${{secrets.FTP_PASS}}
         local-dir: ./theme/
-        server-dir: public_html/wp-content/themes/mazdakdev/
+        server-dir: ./wp-content/themes/mazdakdev/
