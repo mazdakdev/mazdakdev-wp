@@ -9,7 +9,7 @@
 
 ?> 
 
-<article class="mb-16 mt-16 " id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article class="mb-16 mt-8" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<header class="entry-header ">
 		<h1 class="text-white md:text-5xl text-4xl "><strong><?php the_title(); ?></strong></h1>
