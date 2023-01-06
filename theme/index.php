@@ -34,7 +34,7 @@ get_header();
                         alt="Mazdak Pakaghideh"
                         height={176}
                         width={176}
-                        src="https://mazdak.dev/assets/images/1.jpg"
+                        src="https://mazdak.dev/assets/images/Mazdak-Pakaghideh.jpg"
                         class="rounded-full "
                     />
                 </div>
