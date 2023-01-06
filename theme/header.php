@@ -21,11 +21,11 @@
 
 <body id="body">
 	<!-- status mobile -->
-	<div class="flex flex-col justify-center px-8 demo1" id="mobile">
-		<div class="md:hidden ">
+	<div class="flex flex-col justify-center px-8 overflow-hidden demo1" id="mobile">
+		<div class="md:hidden">
 			<div id="burgerBtn" class="mt-6 ml-3" onclick="burgerBtn()" ></div>
 			<!-- nav status -->
-			<ul id="nav"  class="text-gray-400 text-xl hidden">
+			<ul id="nav" class="text-gray-400 text-xl hidden animate__animated animate__fadeInLeft">
 				<a href="/"><li class="hover:text-gray-200">Home</li></a>
 				<a href="/blog"><li class="hover:text-gray-200">Blog</li></a>
 				<a href="/snippets"><li class="hover:text-gray-200">Snippets</li></a>
