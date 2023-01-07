@@ -20,7 +20,7 @@ get_header();
                         Mazdak Pakaghideh
                     </h1>
                     <h2 class="text-gray-200 mb-4">
-                        Teenager Software developer 
+                        Teenager Software Developer 
         
                     </h2>
                     <p class="text-gray-400 mb-16">
