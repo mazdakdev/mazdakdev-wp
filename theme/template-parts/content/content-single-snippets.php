@@ -14,8 +14,7 @@
 	<header class="entry-header ">
         <div class="flex w-full justify-between">
             <div>
-                <h1 class="text-5xl text-white md:mt-8 mt-16"><strong><?php the_title(); ?></strong></h1>
-                <h3 class="text-gray-400 mt-4"><?php the_excerpt(); ?></h3>
+                <h1 class="md:text-4xl text-2xl text-white md:mt-8 mt-16"><strong><?php the_title(); ?></strong></h1>
             </div>
             <div>
                 <img  alt="Django" src="<?php the_post_thumbnail_url(); ?>" class="rounded-full md:mt-8 mt-16" loading="lazy" width="48" height="48">
