@@ -34,13 +34,11 @@ get_header();
                         alt="Mazdak Pakaghideh"
                         height={176}
                         width={176}
-                        src="https://mazdak.dev/assets/images/Mazdak-Pakaghideh.jpg"
+                        src="http://127.0.0.1:3000/assets/images/Mazdak-Pakaghideh.jpg"
                         class="rounded-full "
                     />
                 </div>
         </div>
-
-     
       
             <section class="animate__animated animate__backInLeft">
                 <h3 class="font-bold text-3xl md:text-start text-center  md:text-4xl tracking-tight text-white">
