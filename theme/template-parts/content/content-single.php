@@ -14,14 +14,14 @@
 	<header class="entry-header ">
 		<h1 class="text-white md:text-5xl text-4xl "><strong><?php the_title(); ?></strong></h1>
 		<div class="flex flex-row  mt-8">
-			<img alt="Mazdak Pakaghideh" src="https://mazdak.dev/assets/images/Mazdak-Pakaghideh.jpg" class="rounded-full md:w-[24px] md:h-[24px] w-[20px] h-[20px]"   loading="lazy" >
+			<img alt="Mazdak Pakaghideh" src="https://mazdak.dev/assets/images/Mazdak-Pakaghideh.png" class="rounded-full md:w-[24px] md:h-[24px] w-[20px] h-[20px]"   loading="lazy" >
 		
 			<p class="ml-2 text-sm text-gray-300">Mazdak Pakaghideh / <?php the_date(); ?></p>
 		</div> 
 	</header>
 
 
-	<div class="entry-content prose mt-8 md:-ml-8">
+	<div class="prose mt-8">
 		<?php
 		the_content(
 			sprintf(
