@@ -30,7 +30,7 @@
 				<a href="/blog"><li class="hover:text-gray-200">Blog</li></a>
 				<a href="/snippets"><li class="hover:text-gray-200">Snippets</li></a>
 				<a href="https://github.com/mazdakdev"><li class="hover:text-gray-200">Github</li></a>
-				<a href="/#cv"><li class="hover:text-gray-200">CV</li></a>
+				<a href="/#cv" onclick="burgerBtn()"><li class="hover:text-gray-200">CV</li></a>
 			</ul>
 		</div>
 
