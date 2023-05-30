@@ -134,7 +134,11 @@ get_header();
                 <div>
                     <p class="text-gray-100 mt-6 md:text-start text-center  ">
 It started with love, curiosity, and of course a lot of questions in my heart.
+<<<<<<< HEAD
  I started this path when I was 10 with c++. To me being a developer represents the power of creation & technology is the way to transcend our reality for evolving towards the truth.
+=======
+ I started this path when I was 10 with c++. To me being a developer represents the power of creation & technology is the way to transcend our reality and evolve toward the truth.
+>>>>>>> 0b8fa1fb42fb36aef402a30846aea4ca3a1a7ab5
 
                     </p>
                     <p class="text-gray-100 mt-6 md:text-start text-center  ">

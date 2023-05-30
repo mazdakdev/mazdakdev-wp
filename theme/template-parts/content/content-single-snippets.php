@@ -23,7 +23,7 @@
 	</header>
 
 
-	<div class="entry-content prose mt-8 md:-ml-8">
+	<div class="prose mt-8">
 		<?php
 		the_content(
 			sprintf(
