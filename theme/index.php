@@ -20,11 +20,11 @@ get_header();
                         Mazdak Pakaghideh
                     </h1>
                     <h2 class="text-gray-200 mb-4">
-                        Teenager Software Developer 
+                        Teenage Software Developer 
         
                     </h2>
                     <p class="text-gray-400 mb-16">
-                        Teenager Web, ML & AI Developer and a
+                        Teenage Web, ML & AI Developer and a
                         Penetration tester from Iran
                     </p>
                 </div>
