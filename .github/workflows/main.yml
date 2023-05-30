@@ -12,11 +12,8 @@ jobs:
     
     steps:
     - name: Get the latest code 
-      uses: actions/checkout@v2
-      
-    - name: Setup Node.js environment
-      uses: actions/setup-node@v2.5.2
-      
+      uses: actions/checkout@v3
+
     - name: install requirements 
       uses: borales/actions-yarn@v4
       with:
@@ -31,7 +28,6 @@ jobs:
       uses: borales/actions-yarn@v4
       with:
         cmd: run prod
-
 
     - name: Sync files 
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
