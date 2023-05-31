@@ -137,7 +137,7 @@ get_header();
                         I started this path when I was 10 with c++. To me being a developer represents the power of creation & technology is the way to transcend our reality for evolving towards the truth.
                     </p>
                     <p class="text-gray-100 mt-6 md:text-start text-center  ">
-                        teenager from Rasht/Iran, a knowledge-seeker person who is in love with technology, AI, development and learning everything he possibly could.
+                       A teenager from Rasht/Iran, a knowledge-seeker person who is in love with technology, AI, development and learning everything he possibly could.
                     </p>      
                 </div>
 
