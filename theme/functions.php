@@ -153,3 +153,5 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/comments-helper.php';
 
+add_filter( 'wpseo_remove_reply_to_com', '__return_false' );
+
