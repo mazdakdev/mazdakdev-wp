@@ -24,7 +24,7 @@ get_header();
         
                     </h2>
                     <p class="text-gray-400 mb-16">
-                        Teenage Web, ML, AI Developer and a
+                        Teenage Web, ML & AI Developer and a
                         Penetration tester from Iran
                     </p>
                 </div>
