@@ -27,7 +27,7 @@
 					</svg>
 				</a>
 
-				<a href="https://ir.linkedin.com/in/mazdak-pakaghideh-5b4834204" target="_blank" rel="noreferrer" aria-label="GitHub" class="hover:opacity-75">
+				<a href="https://ir.linkedin.com/in/mazdak-pakaghideh-5b4834204" target="_blank" rel="noreferrer" aria-label="Linkedin" class="hover:opacity-75">
 					<svg fill="currentColor" viewBox="0 0 448 512" aria-hidden="true" class="w-6 h-6">
 						<path
 							fill-rule="evenodd"
@@ -37,7 +37,7 @@
 					</svg>
 				</a>
 
-				<a href="https://t.me/i_mazdak" target="_blank" rel="noreferrer" aria-label="Twitter" class="hover:opacity-75">
+				<a href="https://t.me/i_mazdak" target="_blank" rel="noreferrer" aria-label="Telegram" class="hover:opacity-75">
 				<svg class="w-6 h-6 fill-gray-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
 					<path
 							fill-rule="evenodd"
