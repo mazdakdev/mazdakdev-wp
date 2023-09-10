@@ -32,8 +32,8 @@ get_header();
             <p class="text-gray-400">
                 <?php
                 
-                    $my_content = apply_filters( 'the_content', get_the_content() );
-                    echo wp_trim_words( $my_content, 30);
+                    $excerpt = apply_filters( 'the_content', get_the_excerpt() );
+                    echo wp_trim_words( $excerpt, 30);
                 ?>
             </p>
         </div>
