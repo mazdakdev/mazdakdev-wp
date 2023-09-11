@@ -14,28 +14,28 @@
  
 	</div>
 		<footer class="flex flex-col justify-center items-start max-w-2xl mx-auto w-full mb-8 mt-8">
-		<hr class="w-full border-1 border-gray-800 mb-8"/>
-		<div class="flex m-auto space-x-6 lg:mt-0  text-gray-200">  
-				<a href="mailto:contact@mazdak.dev">
-					<i class="fa-solid fa-envelope md:fa-xl"></i>
-				</a>
-				<a href="mailto:contact@mazdak.dev">
-					<i class="fa-brands fa-telegram md:fa-lg"></i>
-				</a>
-				<a href="mailto:contact@mazdak.dev">
-					<i class="fa-brands fa-github md:fa-lg"></i>
-				</a>
-				<a href="mailto:contact@mazdak.dev">
-					<i class="fa-brands fa-linkedin-in md:fa-lg "></i>
-				</a>
-				<a href="mailto:contact@mazdak.dev">
-					<i class="fa-brands fa-instagram  md:fa-lg"></i>
-				</a>
-				<a href="mailto:contact@mazdak.dev">
-					<i class="fa-brands fa-x-twitter md:fa-lg "></i>
-				</a>
+			<hr class="w-full border-1 border-gray-800 mb-8"/>
+			<div class="flex m-auto space-x-6 lg:mt-0  text-gray-200">  
+					<a href="mailto:contact@mazdak.dev" class="text-base md:text-xl">
+						<i class="fa-solid fa-envelope"></i>
+					</a>
+					<a href="mailto:contact@mazdak.dev" class="text-base md:text-xl">
+						<i class="fa-brands fa-telegram"></i>
+					</a>
+					<a href="" class="text-base md:text-xl">
+						<i class="fa-brands fa-github"></i>
+					</a>
+					<a href="mailto:contact@mazdak.dev" class="text-base md:text-xl">
+						<i class="fa-brands fa-linkedin-in"></i>
+					</a>
+					<a href="mailto:contact@mazdak.dev" class="text-base md:text-xl">
+						<i class="fa-brands fa-instagram"></i>
+					</a>
+					<a href="mailto:contact@mazdak.dev" class="text-base md:text-xl">
+						<i class="fa-brands fa-x-twitter"></i>
+					</a>
 
-		</div>
+			</div>
 
     </footer>
 </div>
