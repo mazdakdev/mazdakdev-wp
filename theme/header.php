@@ -16,7 +16,6 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<script src="https://kit.fontawesome.com/ccc8febacc.js" crossorigin="anonymous"></script>
 	<?php wp_head(); ?>
 </head>
 
@@ -37,30 +36,28 @@
 
 		<div class="flex flex-col justify-center md:items-start items-center max-w-2xl border-gray-700 mx-auto pb-16 " id="mobileBodyContent">
 			<header>          
-			
-
-				<nav class="py-7 rounded flex flex-row">
-  					<div class="container mx-auto">
-   						<ul class="flex flex-col md:flex-row md:space-x-4 md:items-start md:justify-end">
-							<li>
-								<a href="/" class="block py-2 pr-4  text-gray-400 hover:text-gray-200  rounded p-0 " aria-current="page">Home</a>
-							</li>
-							<li>
-								<a href="/blog" class="block py-2 pr-4  text-gray-400 hover:text-gray-200 rounded p-0">Blog</a>
-							</li>
-							<li>
-								<a href="/snippets" class="block py-2 pr-4  text-gray-400 hover:text-gray-200  rounded p-0">Snippets</a>
-							</li>
-							<li>
-								<a href="https://github.com/mazdakdev" target="_blank" class="block py-2 pr-4  text-gray-400  hover:text-gray-200 rounded p-0">Github</a>
-							</li>
-							<li>
-								<a href="/#cv" class="block py-2 pr-4  text-gray-400 hover:text-gray-200 rounded p-0">CV</a>
-							</li>
-    					</ul>
-  					</div>
-  <button class="ml-auto">Button</button>
-</nav>
-
+				<nav class="py-7 rounded ">
+					<div class="md:container md:flex md:flex-col md:justify-center md:items-start md:mx-auto">
+						<div class="hidden md:flex md:w-auto md:order-1"  id="mobile-menu-4">
+							<ul class="flex flex-col mt-4 md:flex-row md:space-x-4 md:mt-0">
+								<li>
+									<a href="/" class="block py-2 pr-4  text-gray-400 hover:text-gray-200  rounded p-0 " aria-current="page">Home</a>
+								</li>
+								<li>
+									<a href="/blog" class="block py-2 pr-4  text-gray-400 hover:text-gray-200 rounded p-0">Blog</a>
+								</li>
+								<li>
+									<a href="/snippets" class="block py-2 pr-4  text-gray-400 hover:text-gray-200  rounded p-0">Snippets</a>
+								</li>
+								<li>
+									<a href="https://github.com/mazdakdev" target="_blank" class="block py-2 pr-4  text-gray-400  hover:text-gray-200 rounded p-0">Github</a>
+								</li>
+								<li>
+									<a href="/#cv" class="block py-2 pr-4  text-gray-400 hover:text-gray-200 rounded p-0">CV</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
 			</header>
 
