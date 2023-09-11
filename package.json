@@ -31,6 +31,7 @@
 		"watch:tailwind:frontend": "npm run development:tailwind:frontend -- --watch",
 		"watch:tailwind:editor": "npm run development:tailwind:editor -- --watch",
 		"watch:esbuild": "npm run development:esbuild -- --watch",
+		"watch:browser-sync": "browser-sync start --proxy \"mazdak.test:8888\" --files \"theme\" --no-notify --no-inject-changes",
 		"watch": "run-p watch:**",
 		"lint:eslint": "npx eslint theme/",
 		"lint:prettier": "npx prettier --check tailwind/**/*.css",
@@ -47,6 +48,7 @@
 		"bundle": "run-s production zip"
 	},
 	"dependencies": {
-		"animate.css": "^4.1.1"
+		"animate.css": "^4.1.1",
+		"browser-sync": "^2.29.3"
 	}
 }
