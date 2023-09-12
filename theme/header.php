@@ -35,10 +35,9 @@
 			</ul>
 		</div>
 
-		<div class="flex flex-col justify-center md:items-start items-center max-w-2xl border-gray-700 mx-auto pb-16 " id="mobileBodyContent">
+		<div class="flex flex-col justify-center max-w-2xl border-gray-700 mx-auto pb-16 " id="mobileBodyContent">
 			<header>          
 				<nav class="py-7 rounded ">
-					<div class="md:container md:flex md:flex-col md:justify-center md:items-start md:mx-auto">
 						<div class="hidden md:flex md:w-auto md:order-1"  id="mobile-menu-4">
 							<ul class="flex flex-col mt-4 md:flex-row md:space-x-4 md:mt-0">
 								<li>
@@ -58,7 +57,6 @@
 								</li>
 							</ul>
 						</div>
-					</div>
 				</nav>
 			</header>
 
