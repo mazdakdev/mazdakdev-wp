@@ -9,23 +9,13 @@
 
 get_header();
 ?>
-
-	<section id="primary">
-		<main id="main">
-
-			<div>
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Page Not Found', 'mazdakdev' ); ?></h1>
-				</header><!-- .page-header -->
-
-				<div class="page-content prose">
-					<p><?php esc_html_e( 'This page could not be found. It might have been removed or renamed, or it may never have existed.', 'mazdakdev' ); ?></p>
-					<?php get_search_form(); ?>
-				</div><!-- .page-content -->
-			</div>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
+    <div class="flex flex-col md:flex-row mt-8">
+      <img class="md:h-60 md:w-60 w-52 h-52 animate__animated animate__headShake self-center" src="https://mazdak.dev/assets/images/404.png" />
+      <div class="self-center ml-4 text-center md:text-start">
+        <strong class="text-4xl md:text-5xl text-gray-100">Page Not Found <i>!<i></strong>
+        <div class="text-2xl text-gray-300">You've Got Lost.</div>
+      </div>
+    </div>
 
 <?php
 get_footer();
