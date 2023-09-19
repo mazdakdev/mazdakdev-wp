@@ -19,7 +19,7 @@
 					<a href="mailto:contact@mazdak.dev" class="text-base md:text-xl">
 						<i class="fa-solid fa-envelope"></i>
 					</a>
-					<a href="https://t.me/i_mazdak" class="text-base md:text-xl" rel="noreferrer" target="_blank">
+					<a href="https://t.me/mazdakdev" class="text-base md:text-xl" rel="noreferrer" target="_blank">
 						<i class="fa-brands fa-telegram"></i>
 					</a>
 					<a href="https://github.com/mazdakdev" class="text-base md:text-xl" rel="noreferrer" target="_blank">
