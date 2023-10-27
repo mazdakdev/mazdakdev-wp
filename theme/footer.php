@@ -28,6 +28,9 @@
 					<a href="https://www.linkedin.com/in/mazdak-pakaghideh-5b4834204" class="text-base md:text-xl" rel="noreferrer" target="_blank">
 						<i class="fa-brands fa-linkedin-in"></i>
 					</a>
+					<a href="https://instagram.com/mazdak.dev" class="text-base md:text-xl" rel="noreferrer" target="_blank">
+						<i class="fa-brands fa-instagram"></i>
+					</a>
 					<a href="https://x.com/mazdakdev" class="text-base md:text-xl" rel="noreferrer" target="_blank">
 						<i class="fa-brands fa-x-twitter"></i>
 					</a>
