@@ -2368,7 +2368,7 @@ function comment_form( $args = array(), $post = null ) {
 			sprintf(
 				'<label for="author">%s%s</label>',
 				__( 'Name' ),
-				( '' )
+				( '*' )
 			),
 			sprintf(
 				'<div class="div-name-input"><input id="author" class="name-input" name="author" type="text" value="%s" size="30" maxlength="245" autocomplete="name"%s /></div></div>',
@@ -2381,7 +2381,7 @@ function comment_form( $args = array(), $post = null ) {
 			sprintf(
 				'<label for="email">%s%s</label>',
 				__( 'Email' ),
-				('')
+				('*')
 			),
 			sprintf(
 				'<div class="div-email-input"><input id="email" name="email" class="email-input" %s value="%s" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email"%s /></div></div>',
