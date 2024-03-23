@@ -33,7 +33,7 @@ get_header();
                             alt="Mazdak Pakaghideh"
                             height={176}
                             width={176}
-                            src="https://mazdak.dev/assets/images/Mazdak-Pakaghideh.png"
+                            src="https://mazdak.dev/assets/images/avatar.jpeg"
                             class="rounded-full"
                         />
                     </div>
