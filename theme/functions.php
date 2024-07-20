@@ -155,3 +155,56 @@ require get_template_directory() . '/inc/comments-helper.php';
 
 add_filter( 'wpseo_remove_reply_to_com', '__return_false' );
 
+
+/**
+ * Customize Comments Form
+ */
+
+ function my_custom_comment_form_fields($fields) {
+    $commenter = wp_get_current_commenter();
+    $req = get_option('require_name_email');
+    $html5 = current_theme_supports('html5', 'comment-form');
+
+    $fields['author'] = '<div class="flex flex-row"><p class="comment-form-author txt-labels">'
+        . '<label for="author">' . __('Name') . ($req ? ' *' : '') . '</label>'
+        . '<div class="div-name-input"><input id="author" class="name-input" name="author" type="text" value="' . esc_attr($commenter['comment_author']) . '" size="30" maxlength="245"' . ($req ? ' required' : '') . ' /></div></div>';
+
+    $fields['email'] = '<div class="flex flex-row"><p class="comment-form-email txt-labels">'
+        . '<label for="email">' . __('Email') . ($req ? ' *' : '') . '</label>'
+        . '<div class="div-email-input"><input id="email" name="email" class="email-input" type="email" value="' . esc_attr($commenter['comment_author_email']) . '" size="30" maxlength="100" aria-describedby="email-notes"' . ($req ? ' required' : '') . ' /></div></div>';
+
+    $fields['url'] = '<div class="flex flex-row"><p class="comment-form-url txt-labels">'
+        . '<label for="url">' . __('Website') . '</label>'
+        . '<div class="div-web-input"><input id="url" class="email-input" name="url" type="url" value="' . esc_attr($commenter['comment_author_url']) . '" size="30" maxlength="200" autocomplete="url" /></div></div>';
+
+    // Remove the cookies field
+    unset($fields['cookies']);
+
+    return $fields;
+}
+add_filter('comment_form_default_fields', 'my_custom_comment_form_fields');
+
+// Customizing the Comment Textarea Field
+function my_custom_comment_field($field) {
+    $field = '<div class="divtxtarea"><textarea id="comment" name="comment" class="txtarea" placeholder="Write a comment..." rows="6" maxlength="65525" required></textarea></div>';
+    return $field;
+}
+add_filter('comment_form_field_comment', 'my_custom_comment_field');
+
+// Customizing the Comment Form Defaults
+function my_custom_comment_form_defaults($defaults) {
+    $defaults['class_submit'] = 'post-btn';
+    $defaults['submit_button'] = '<button class="post-btn" type="submit" id="%2$s" class="%3$s" value="%4$s">Post Comment</button>';
+    $defaults['title_reply'] = __('<h2 class="font-bold text-gray-200 mb-6 txt-dsc">Discussion (' . get_comments_number() . ')</h2>');
+    $defaults['label_submit'] = __('Post Comment');
+    $defaults['cancel_reply_link'] = __('Cancel reply');
+    $defaults['submit_field'] = '<p class="form-submit">%1$s %2$s</p>';
+
+    // Remove the comment notes and logged in text
+    $defaults['comment_notes_before'] = '';
+    $defaults['comment_notes_after'] = '';
+    $defaults['logged_in_as'] = '';
+
+    return $defaults;
+}
+add_filter('comment_form_defaults', 'my_custom_comment_form_defaults');
