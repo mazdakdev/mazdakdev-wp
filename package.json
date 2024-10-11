@@ -49,6 +49,6 @@
 	},
 	"dependencies": {
 		"animate.css": "^4.1.1",
-		"browser-sync": "^3.0.2"
+		"browser-sync": "^3.0.3"
 	}
 }
