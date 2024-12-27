@@ -15,6 +15,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="me" href="https://mastodon.social/@mazdakdev" />
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<script src="https://kit.fontawesome.com/ccc8febacc.js" crossorigin="anonymous"></script>
 	<?php wp_head(); ?>
