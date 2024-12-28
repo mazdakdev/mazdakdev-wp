@@ -15,7 +15,6 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="me" href="https://mastodon.social/@mazdakdev" />
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<script src="https://kit.fontawesome.com/ccc8febacc.js" crossorigin="anonymous"></script>
 	<?php wp_head(); ?>
@@ -37,7 +36,7 @@
 		</div>
 
 		<div class="flex flex-col justify-center max-w-2xl border-gray-700 mx-auto pb-16 " id="mobileBodyContent">
-			<header>          
+			<header>
 				<nav class="py-7 rounded ">
 						<div class="hidden md:flex md:w-auto md:order-1"  id="mobile-menu-4">
 							<ul class="flex flex-col mt-4 md:flex-row md:space-x-4 md:mt-0">
@@ -60,4 +59,3 @@
 						</div>
 				</nav>
 			</header>
-
