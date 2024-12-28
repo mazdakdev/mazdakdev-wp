@@ -19,11 +19,11 @@ get_header();
                         <h1 class="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-white">
                             Mazdak Pakaghideh
                         </h1>
-                        <h2 class="text-gray-200 mb-4">
-                            Teenage Software Developer
+                        <h2 class="text-gray-200 mb-4">   
+		    Student | Software Developer
                         </h2>
                         <p class="text-gray-400 mb-16">
-                            Teenage Web, ML & AI Developer and a Security Enthusiast from Iran
+                            Web & ML Developer, DL, Security & Web3 Enthusiast based in Iran. 
                         </p>
                     </div>
 
@@ -32,7 +32,7 @@ get_header();
                             alt="Mazdak Pakaghideh"
                             height={176}
                             width={176}
-                            src="https://mazdak.dev/assets/images/avatar.jpeg"
+                            src="https://mazdak.dev/assets/images/Mazdak-Pakaghideh.png"
                             class="rounded-full"
                         />
                     </div>
@@ -135,7 +135,7 @@ get_header();
                         I started this path when I was 10 with c++. To me being a developer represents the power of creation & technology is the way to transcend our reality for evolving towards the truth.
                     </p>
                     <p class="text-gray-100 mt-6 md:text-start text-center">
-                       I'm a teenager from Rasht/Iran, a knowledge-seeker person who is in love with technology, AI, development and learning everything he possibly could.
+                       I'm a software developer from Iran, a knowledge-seeker person who is in love with technology, AI, development and learning everything he possibly could.
                     </p>      
                 </div>
 
