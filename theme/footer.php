@@ -36,7 +36,7 @@
 						<i class="fa-brands fa-instagram"></i>
 					</a>
 
-					<a rel="me" href="https://defcon.social/@mazdak" class="text-base md:text-xl" rel="noreferrer" target="_blank">
+					<a rel="me" href="https://persadon.com/@mazdak" class="text-base md:text-xl" rel="noreferrer" target="_blank">
 						<i class="fa-brands fa-mastodon"></i>
 					</a>
 
