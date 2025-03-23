@@ -114,6 +114,8 @@ add_action( 'widgets_init', 'mazdakdev_widgets_init' );
  * Enqueue scripts and styles.
  */
 function mazdakdev_scripts() {
+    // Enqueue Font Awesome
+    wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/ccc8febacc.js', array(), MAZDAKDEV_VERSION, false);
 	wp_enqueue_style( 'mazdakdev-style', get_stylesheet_uri(), array(), MAZDAKDEV_VERSION );
 	wp_register_script('mazdakdev-script',get_template_directory_uri() . "/js/script.min.js", array(''),'1.1', true);
 	wp_enqueue_script('mazdakdev-script');

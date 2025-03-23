@@ -44,16 +44,16 @@ get_header();
                 </h3>
               
 
-                <div class="flex gap-6 flex-col md:flex-row mt-6 " style="padding:1px;">
+                <div class="flex gap-6 flex-col md:flex-row mt-6 custom-padding">
                     <?php
-                        $args = array('numberposet' => 3);
+                        $args = array('posts_per_page' => 3);
                         $posts = get_posts($args);
                     ?>
 
                <?php if(isset($posts[0])){ ?>
-                        <a href="<?php echo 'index.php/'.$posts[0]->post_name;?>" class="post-1 md:w-[208px] md:h-[210px] h-40 shadow-sm justify-center items-center  flex p-5 hover:scale-[1.01] " >
+                        <a href="<?php echo esc_url(get_permalink($posts[0]->ID)); ?>" class="post-1 md:w-[208px] md:h-[210px] h-40 shadow-sm justify-center items-center  flex p-5 hover:scale-[1.01]" >
                             <p class="text-white text-xl text-center  md:text-start ">
-                            <?php echo $posts[0]->post_title?>
+                            <?php echo esc_html($posts[0]->post_title); ?>
                             </p>
                         </a>
                     <?php } 
@@ -68,9 +68,9 @@ get_header();
                     
 
                      <?php if(isset($posts[1])){ ?>
-                        <a href="<?php echo 'index.php/'.$posts[1]->post_name;?>" class="post-2 md:w-[208px] md:h-[210px] h-40 shadow-sm justify-center items-center  flex p-5 hover:scale-[1.01] " >
+                        <a href="<?php echo esc_url(get_permalink($posts[1]->ID)); ?>" class="post-2 md:w-[208px] md:h-[210px] h-40 shadow-sm justify-center items-center  flex p-5 hover:scale-[1.01]" >
                             <p class="text-white text-xl text-center  md:text-start ">
-                            <?php echo $posts[1]->post_title?>
+                            <?php echo esc_html($posts[1]->post_title); ?>
                             </p>
                         </a>
                     <?php } 
@@ -84,9 +84,9 @@ get_header();
                     <?php }?>
 
                        <?php if(isset($posts[2])){ ?>
-                        <a href="<?php echo 'index.php/'.$posts[2]->post_name;?>" class="post-3 md:w-[208px] md:h-[210px] h-40 shadow-sm justify-center items-center  flex p-5 hover:scale-[1.01] " >
+                        <a href="<?php echo esc_url(get_permalink($posts[2]->ID)); ?>" class="post-3 md:w-[208px] md:h-[210px] h-40 shadow-sm justify-center items-center  flex p-5 hover:scale-[1.01]" >
                             <p class="text-white text-xl text-center  md:text-start ">
-                            <?php echo $posts[2]->post_title?>
+                            <?php echo esc_html($posts[2]->post_title); ?>
                             </p>
                         </a>
                     <?php } 
