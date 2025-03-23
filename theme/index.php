@@ -30,10 +30,11 @@ get_header();
                     <div class="w-[146px] sm:w-[176px] flex items-center mb-8 z-50 ">
                         <img 
                             alt="Mazdak Pakaghideh"
-                            height={176}
-                            width={176}
-                            src="https://mazdak.dev/assets/images/Mazdak-Pakaghideh.png"
+                            height="176"
+                            width="176"
+                            src="<?php echo get_template_directory_uri(); ?>/assets/images/Mazdak-Pakaghideh.png"
                             class="rounded-full"
+                            loading="lazy"
                         />
                     </div>
             </div>
