@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template part for displaying posts
  *
@@ -13,13 +14,13 @@
 
 	<header class="entry-header">
 		<?php
-		if ( is_sticky() && is_home() && ! is_paged() ) {
-			printf( '<span">%s</span>', esc_html_x( 'Featured', 'post', 'mazdakdev' ) );
+		if (is_sticky() && is_home() && ! is_paged()) {
+			printf('<span">%s</span>', esc_html_x('Featured', 'post', 'mazdakdev'));
 		}
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+		if (is_singular()) :
+			the_title('<h1 class="entry-title">', '</h1>');
 		else :
-			the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
+			the_title(sprintf('<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>');
 		endif;
 		?>
 	</header><!-- .entry-header -->
@@ -32,7 +33,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div>' . __( 'Pages:', 'mazdakdev' ),
+				'before' => '<div>' . __('Pages:', 'mazdakdev'),
 				'after'  => '</div>',
 			)
 		);

@@ -1,6 +1,6 @@
 <?php
-if( ! function_exists( 'better_commets' ) ):
-function better_comments($comment, $args, $depth) {
+if( ! function_exists( 'mazdakdev_better_comments' ) ):
+function mazdakdev_better_comments($comment, $args, $depth) {
     ?>
 
 
@@ -9,7 +9,7 @@ function better_comments($comment, $args, $depth) {
         <footer class="flex justify-between items-center mb-2">
             <div class="flex items-center">
                 <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><?php echo get_avatar($comment); ?><?php echo get_comment_author() ?></p>
-                <p class="text-xs break-all sm:text-sm text-gray-600 dark:text-gray-400"><?php printf(/* translators: 1: date and time(s). */ esc_html__('%1$s' , '5balloons_theme'), get_comment_date(),  get_comment_time()) ?>
+                <p class="text-xs break-all sm:text-sm text-gray-600 dark:text-gray-400"><?php printf(/* translators: 1: date and time(s). */ esc_html__('%1$s' , 'mazdakdev'), get_comment_date(),  get_comment_time()) ?>
                 </p>
             </div>
         </footer>

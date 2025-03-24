@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying archive pages
  *
@@ -10,22 +11,22 @@
 get_header();
 ?>
 
-	<section id="primary">
-		<main id="main">
+<section id="primary">
+	<main id="main">
 
-		<?php if ( have_posts() ) : ?>
+		<?php if (have_posts()) : ?>
 
 			<header class="page-header">
-				<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
+				<?php the_archive_title('<h1 class="page-title">', '</h1>'); ?>
 			</header><!-- .page-header -->
 
-			<?php
+		<?php
 			// Start the Loop.
-			while ( have_posts() ) :
+			while (have_posts()) :
 				the_post();
-				get_template_part( 'template-parts/content/content', 'excerpt' );
+				get_template_part('template-parts/content/content', 'excerpt');
 
-				// End the loop.
+			// End the loop.
 			endwhile;
 
 			// Previous/next page navigation.
@@ -34,12 +35,12 @@ get_header();
 		else :
 
 			// If no content, include the "No posts found" template.
-			get_template_part( 'template-parts/content/content', 'none' );
+			get_template_part('template-parts/content/content', 'none');
 
 		endif;
 		?>
-		</main><!-- #main -->
-	</section><!-- #primary -->
+	</main><!-- #main -->
+</section><!-- #primary -->
 
 <?php
 get_footer();
