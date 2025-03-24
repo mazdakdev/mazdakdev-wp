@@ -49,55 +49,28 @@ get_header();
         <?php
         $args = array('posts_per_page' => 3);
         $posts = get_posts($args);
+        
+        for ($i = 0; $i < 3; $i++) {
+            $post_class = "post-" . ($i + 1);
+            if (isset($posts[$i])) {
+                ?>
+                <a href="<?php echo esc_url(get_permalink($posts[$i]->ID)); ?>" class="<?php echo $post_class; ?> md:w-[208px] md:h-[210px] h-40 shadow-sm justify-center items-center flex p-5 hover:scale-[1.01]">
+                    <p class="text-white text-xl text-center md:text-start">
+                        <?php echo esc_html($posts[$i]->post_title); ?>
+                    </p>
+                </a>
+                <?php
+            } else {
+                ?>
+                <a class="<?php echo $post_class; ?> shadow-sm md:w-[208px] md:h-[210px] h-40 justify-center items-center flex p-5 hover:scale-[1.01]">
+                    <p class="text-gray-400 text-xl text-center md:text-start">
+                        Not Available
+                    </p>
+                </a>
+                <?php
+            }
+        }
         ?>
-
-        <?php if (isset($posts[0])) { ?>
-            <a href="<?php echo esc_url(get_permalink($posts[0]->ID)); ?>" class="post-1 md:w-[208px] md:h-[210px] h-40 shadow-sm justify-center items-center  flex p-5 hover:scale-[1.01]">
-                <p class="text-white text-xl text-center  md:text-start ">
-                    <?php echo esc_html($posts[0]->post_title); ?>
-                </p>
-            </a>
-        <?php } else { ?>
-
-            <a class="post-1 shadow-sm md:w-[208px] md:h-[210px] h-40 justify-center items-center  flex p-5 hover:scale-[1.01]">
-                <p class="text-gray-400 text-xl  text-center md:text-start  ">
-                    Not Available
-                </p>
-            </a>
-        <?php } ?>
-
-
-        <?php if (isset($posts[1])) { ?>
-            <a href="<?php echo esc_url(get_permalink($posts[1]->ID)); ?>" class="post-2 md:w-[208px] md:h-[210px] h-40 shadow-sm justify-center items-center  flex p-5 hover:scale-[1.01]">
-                <p class="text-white text-xl text-center  md:text-start ">
-                    <?php echo esc_html($posts[1]->post_title); ?>
-                </p>
-            </a>
-        <?php } else { ?>
-
-            <a class="post-2 shadow-sm md:w-[208px] md:h-[210px] h-40 justify-center items-center  flex p-5 hover:scale-[1.01]">
-                <p class="text-gray-400 text-xl  text-center md:text-start  ">
-                    Not Available
-                </p>
-            </a>
-        <?php } ?>
-
-        <?php if (isset($posts[2])) { ?>
-            <a href="<?php echo esc_url(get_permalink($posts[2]->ID)); ?>" class="post-3 md:w-[208px] md:h-[210px] h-40 shadow-sm justify-center items-center  flex p-5 hover:scale-[1.01]">
-                <p class="text-white text-xl text-center  md:text-start ">
-                    <?php echo esc_html($posts[2]->post_title); ?>
-                </p>
-            </a>
-        <?php } else { ?>
-
-            <a class="post-3 shadow-sm md:w-[208px] md:h-[210px] h-40 justify-center items-center  flex p-5 hover:scale-[1.01]">
-                <p class="text-gray-400 text-xl  text-center md:text-start  ">
-                    Not Available
-                </p>
-            </a>
-        <?php } ?>
-
-
     </div>
 
     <a href="/blog" class="flex mt-8 items-start-start justify-start  text-gray-400 leading-7 rounded-lg hover:text-gray-200 transition-all h-6">
