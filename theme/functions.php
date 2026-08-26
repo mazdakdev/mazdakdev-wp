@@ -163,17 +163,18 @@ function mazdakdev_custom_comment_form_fields($fields)
 {
 	$commenter = wp_get_current_commenter();
 	$req = get_option('require_name_email');
+	$html5 = current_theme_supports('html5', 'comment-form');
 
-	$fields['author'] = '<div class="comment-form-author txt-labels flex flex-row">'
-		. '<label for="author">' . esc_html__('Name', 'mazdakdev') . ($req ? ' *' : '') . '</label>'
+	$fields['author'] = '<div class="flex flex-row"><p class="comment-form-author txt-labels">'
+		. '<label for="author">' . __('Name') . ($req ? ' *' : '') . '</label>'
 		. '<div class="div-name-input"><input id="author" class="name-input" name="author" type="text" value="' . esc_attr($commenter['comment_author']) . '" size="30" maxlength="245"' . ($req ? ' required' : '') . ' /></div></div>';
 
-	$fields['email'] = '<div class="comment-form-email txt-labels flex flex-row">'
-		. '<label for="email">' . esc_html__('Email', 'mazdakdev') . ($req ? ' *' : '') . '</label>'
+	$fields['email'] = '<div class="flex flex-row"><p class="comment-form-email txt-labels">'
+		. '<label for="email">' . __('Email') . ($req ? ' *' : '') . '</label>'
 		. '<div class="div-email-input"><input id="email" name="email" class="email-input" type="email" value="' . esc_attr($commenter['comment_author_email']) . '" size="30" maxlength="100" aria-describedby="email-notes"' . ($req ? ' required' : '') . ' /></div></div>';
 
-	$fields['url'] = '<div class="comment-form-url txt-labels flex flex-row">'
-		. '<label for="url">' . esc_html__('Website', 'mazdakdev') . '</label>'
+	$fields['url'] = '<div class="flex flex-row"><p class="comment-form-url txt-labels">'
+		. '<label for="url">' . __('Website') . '</label>'
 		. '<div class="div-web-input"><input id="url" class="email-input" name="url" type="url" value="' . esc_attr($commenter['comment_author_url']) . '" size="30" maxlength="200" autocomplete="url" /></div></div>';
 
 	// Remove the cookies field
@@ -187,7 +188,7 @@ add_filter('comment_form_default_fields', 'mazdakdev_custom_comment_form_fields'
 // Customizing the Comment Textarea Field
 function mazdakdev_custom_comment_field($field)
 {
-	$field = '<div class="divtxtarea"><textarea id="comment" name="comment" class="txtarea" placeholder="' . esc_attr__('Write a comment...', 'mazdakdev') . '" rows="6" maxlength="65525" required></textarea></div>';
+	$field = '<div class="divtxtarea"><textarea id="comment" name="comment" class="txtarea" placeholder="Write a comment..." rows="6" maxlength="65525" required></textarea></div>';
 	return $field;
 }
 
@@ -197,16 +198,10 @@ add_filter('comment_form_field_comment', 'mazdakdev_custom_comment_field');
 function mazdakdev_custom_comment_form_defaults($defaults)
 {
 	$defaults['class_submit'] = 'post-btn';
-	$defaults['submit_button'] = '<button type="submit" id="%2$s" class="%3$s post-btn" value="%4$s">%4$s</button>';
-	$defaults['title_reply_before'] = '<h2 class="font-bold text-gray-200 mb-6 txt-dsc">';
-	$defaults['title_reply'] = sprintf(
-		/* translators: %s: comment count. */
-		__('Discussion (%s)', 'mazdakdev'),
-		number_format_i18n(get_comments_number())
-	);
-	$defaults['title_reply_after'] = '</h2>';
-	$defaults['label_submit'] = __('Post Comment', 'mazdakdev');
-	$defaults['cancel_reply_link'] = __('Cancel reply', 'mazdakdev');
+	$defaults['submit_button'] = '<button class="post-btn" type="submit" id="%2$s" class="%3$s" value="%4$s">Post Comment</button>';
+	$defaults['title_reply'] = __('<h2 class="font-bold text-gray-200 mb-6 txt-dsc">Discussion (' . get_comments_number() . ')</h2>');
+	$defaults['label_submit'] = __('Post Comment');
+	$defaults['cancel_reply_link'] = __('Cancel reply');
 	$defaults['submit_field'] = '<p class="form-submit">%1$s %2$s</p>';
 
 	// Remove the comment notes and logged in text

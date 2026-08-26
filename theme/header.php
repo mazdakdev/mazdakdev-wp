@@ -22,19 +22,28 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> id="body">
-	<?php wp_body_open(); ?>
+<body id="body">
 	<!-- status mobile -->
 	<div class="flex flex-col justify-center px-8 overflow-hidden demo1" id="mobile">
 		<div class="md:hidden">
 			<div id="burgerBtn" class="mt-6 ml-3"></div>
 			<!-- nav status -->
 			<ul id="nav" class="text-gray-400 text-xl hidden animate__animated animate__fadeInLeft">
-				<li class="hover:text-gray-200"><a href="<?php echo esc_url(home_url('/')); ?>">Home</a></li>
-				<li class="hover:text-gray-200"><a href="<?php echo esc_url(home_url('/blog/')); ?>">Blog</a></li>
-				<li class="hover:text-gray-200"><a href="<?php echo esc_url(home_url('/snippets/')); ?>">Snippets</a></li>
-				<li class="hover:text-gray-200"><a href="https://github.com/mazdakdev" target="_blank" rel="noopener noreferrer">Github</a></li>
-				<li class="hover:text-gray-200"><a href="<?php echo esc_url(home_url('/#cv')); ?>">CV</a></li>
+				<a href="/">
+					<li class="hover:text-gray-200">Home</li>
+				</a>
+				<a href="/blog">
+					<li class="hover:text-gray-200">Blog</li>
+				</a>
+				<a href="/snippets">
+					<li class="hover:text-gray-200">Snippets</li>
+				</a>
+				<a href="https://github.com/mazdakdev">
+					<li class="hover:text-gray-200">Github</li>
+				</a>
+				<a href="/#cv">
+					<li class="hover:text-gray-200">CV</li>
+				</a>
 			</ul>
 		</div>
 
@@ -44,19 +53,19 @@
 					<div class="hidden md:flex md:w-auto md:order-1" id="mobile-menu-4">
 						<ul class="flex flex-col mt-4 md:flex-row md:space-x-4 md:mt-0">
 							<li>
-								<a href="<?php echo esc_url(home_url('/')); ?>" class="block py-2 pr-4  text-gray-400 hover:text-gray-200  rounded p-0 " aria-current="page">Home</a>
+								<a href="/" class="block py-2 pr-4  text-gray-400 hover:text-gray-200  rounded p-0 " aria-current="page">Home</a>
 							</li>
 							<li>
-								<a href="<?php echo esc_url(home_url('/blog/')); ?>" class="block py-2 pr-4  text-gray-400 hover:text-gray-200 rounded p-0">Blog</a>
+								<a href="/blog" class="block py-2 pr-4  text-gray-400 hover:text-gray-200 rounded p-0">Blog</a>
 							</li>
 							<li>
-								<a href="<?php echo esc_url(home_url('/snippets/')); ?>" class="block py-2 pr-4  text-gray-400 hover:text-gray-200  rounded p-0">Snippets</a>
+								<a href="/snippets" class="block py-2 pr-4  text-gray-400 hover:text-gray-200  rounded p-0">Snippets</a>
 							</li>
 							<li>
-								<a href="https://github.com/mazdakdev" target="_blank" rel="noopener noreferrer" class="block py-2 pr-4  text-gray-400  hover:text-gray-200 rounded p-0">Github</a>
+								<a href="https://github.com/mazdakdev" target="_blank" class="block py-2 pr-4  text-gray-400  hover:text-gray-200 rounded p-0">Github</a>
 							</li>
 							<li>
-								<a href="<?php echo esc_url(home_url('/#cv')); ?>" class="block py-2 pr-4  text-gray-400 hover:text-gray-200 rounded p-0">CV</a>
+								<a href="/#cv" class="block py-2 pr-4  text-gray-400 hover:text-gray-200 rounded p-0">CV</a>
 							</li>
 						</ul>
 					</div>

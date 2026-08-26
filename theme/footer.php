@@ -21,27 +21,27 @@
 			<i class="fa-solid fa-envelope"></i>
 		</a>
 
-		<a href="https://t.me/mazdakdev" class="text-base md:text-xl" rel="noopener noreferrer" target="_blank">
+		<a href="https://t.me/mazdakdev" class="text-base md:text-xl" rel="noreferrer" target="_blank">
 			<i class="fa-brands fa-telegram"></i>
 		</a>
 
-		<a href="https://github.com/mazdakdev" class="text-base md:text-xl" rel="noopener noreferrer" target="_blank">
+		<a href="https://github.com/mazdakdev" class="text-base md:text-xl" rel="noreferrer" target="_blank">
 			<i class="fa-brands fa-github"></i>
 		</a>
 
-		<a href="https://www.linkedin.com/in/mazdak-pakaghideh-5b4834204" class="text-base md:text-xl" rel="noopener noreferrer" target="_blank">
+		<a href="https://www.linkedin.com/in/mazdak-pakaghideh-5b4834204" class="text-base md:text-xl" rel="noreferrer" target="_blank">
 			<i class="fa-brands fa-linkedin-in"></i>
 		</a>
 
-		<a href="https://instagram.com/mazdak.dev" class="text-base md:text-xl" rel="noopener noreferrer" target="_blank">
+		<a href="https://instagram.com/mazdak.dev" class="text-base md:text-xl" rel="noreferrer" target="_blank">
 			<i class="fa-brands fa-instagram"></i>
 		</a>
 
-		<a rel="me noopener noreferrer" href="https://persadon.com/@mazdak" class="text-base md:text-xl" target="_blank">
+		<a rel="me" href="https://persadon.com/@mazdak" class="text-base md:text-xl" rel="noreferrer" target="_blank">
 			<i class="fa-brands fa-mastodon"></i>
 		</a>
 
-		<a href="https://x.com/mazdakdev" class="text-base md:text-xl" rel="noopener noreferrer" target="_blank">
+		<a href="https://x.com/mazdakdev" class="text-base md:text-xl" rel="noreferrer" target="_blank">
 			<i class="fa-brands fa-x-twitter"></i>
 		</a>
 
