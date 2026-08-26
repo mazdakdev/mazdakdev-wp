@@ -11,11 +11,11 @@
 		"@wordpress/eslint-plugin": "^13.4.0",
 		"archiver": "^5.3.1",
 		"cross-env": "^7.0.3",
-		"esbuild": "^0.15.12",
+		"esbuild": "^0.28.1",
 		"eslint-plugin-php-markup": "^6.0.0",
 		"eslint-plugin-tailwindcss": "^3.6.2",
 		"npm-run-all": "^4.1.5",
-		"postcss": "^8.4.45",
+		"postcss": "^8.5.26",
 		"postcss-import-ext-glob": "^2.0.1",
 		"postcss-simple-vars": "^7.0.0",
 		"prettier": "^2.7.1",
@@ -49,6 +49,6 @@
 	},
 	"dependencies": {
 		"animate.css": "^4.1.1",
-		"browser-sync": "^3.0.2"
+		"browser-sync": "^3.0.4"
 	}
 }
