@@ -1,5 +1,5 @@
-<!--?php /* Template Name: Blog */ ?-->
 <?php
+/* Template Name: Blog */
 get_header();
 ?>
 
@@ -22,7 +22,7 @@ get_header();
     ?>
 
 
-            <a href="<?php the_permalink(); ?>" class="w-full">
+            <a href="<?php echo esc_url(get_permalink()); ?>" class="w-full">
                 <div class="mb-8">
                     <div class="flex flex-col justify-between md:flex-row">
                         <h4 class="w-full mb-2 text-lg font-medium  md:text-xl text-gray-100">
@@ -33,7 +33,7 @@ get_header();
                         <?php
 
                         $excerpt = apply_filters('the_content', get_the_excerpt());
-                        echo wp_trim_words($excerpt, 30);
+                        echo wp_kses_post(wp_trim_words($excerpt, 30));
                         ?>
                     </p>
                 </div>
@@ -41,6 +41,11 @@ get_header();
 
     <?php
         }
+        wp_reset_postdata();
+    } else {
+        ?>
+            <p class="text-gray-400"><?php esc_html_e('No posts found.', 'mazdakdev'); ?></p>
+        <?php
     }
     ?>
 

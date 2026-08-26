@@ -15,9 +15,9 @@
 	<header class="entry-header ">
 		<h1 class="text-white md:text-5xl text-4xl "><strong><?php the_title(); ?></strong></h1>
 		<div class="flex flex-row  mt-8">
-			<img alt="Mazdak Pakaghideh" src="<?php echo get_template_directory_uri(); ?>/assets/images/Mazdak-Pakaghideh.png" class="rounded-full md:w-[24px] md:h-[24px] w-[20px] h-[20px]" loading="lazy">
+			<img alt="Mazdak Pakaghideh" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/Mazdak-Pakaghideh.png'); ?>" class="rounded-full md:w-[24px] md:h-[24px] w-[20px] h-[20px]" loading="lazy">
 
-			<p class="ml-2 text-sm text-gray-300">Mazdak Pakaghideh / <?php the_date(); ?></p>
+			<p class="ml-2 text-sm text-gray-300">Mazdak Pakaghideh / <?php echo esc_html(get_the_date()); ?></p>
 		</div>
 	</header>
 

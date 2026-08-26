@@ -16,12 +16,12 @@
 
 			<h1 class="page-title">
 				<?php
-					printf(
-						/* translators: 1: search result title. 2: search term. */
-						'<h1 class="page-title">%1$s <span>%2$s</span></h1>',
-						esc_html__( 'Search results for:', 'mazdakdev' ),
-						get_search_query()
-					);
+				printf(
+					/* translators: 1: search result title. 2: search term. */
+					'%1$s <span>%2$s</span>',
+					esc_html__('Search results for:', 'mazdakdev'),
+					esc_html(get_search_query())
+				);
 				?>
 			</h1>
 

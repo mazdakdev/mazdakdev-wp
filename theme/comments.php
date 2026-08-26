@@ -1,7 +1,9 @@
-<?php /*
-	
-@package sunsettheme
-*/
+<?php
+/**
+ * Comments template
+ *
+ * @package mazdakdev
+ */
 
 if (post_password_required()) {
 	return;
@@ -29,21 +31,21 @@ if (have_comments()):
 			<?php
 
 			$args = array(
-				'walker'			=> null,
-				'max_depth' 		=> '',
-				'style'				=> 'ol',
-				'callback'			=> 'mazdakdev_better_comments',
-				'end-callback'		=> null,
-				'type'				=> 'all',
-				'reply_text'		=> 'Reply',
-				'page'				=> '',
-				'per_page'			=> '',
-				'avatar_size'		=> 32,
+				'walker'            => null,
+				'max_depth'         => '',
+				'style'             => 'ol',
+				'callback'          => 'mazdakdev_better_comments',
+				'end-callback'      => null,
+				'type'              => 'all',
+				'reply_text'        => __('Reply', 'mazdakdev'),
+				'page'              => '',
+				'per_page'          => '',
+				'avatar_size'       => 32,
 				'reverse_top_level' => null,
-				'reverse_children'	=> '',
-				'format'			=> 'html5',
-				'short_ping'		=> false,
-				'echo'				=> true
+				'reverse_children'  => '',
+				'format'            => 'html5',
+				'short_ping'        => false,
+				'echo'              => true,
 			);
 
 			wp_list_comments($args);
@@ -55,7 +57,7 @@ if (have_comments()):
 		if (!comments_open() && get_comments_number()):
 		?>
 
-			<p class="no-comments"><?php esc_html_e('Comments are closed.', 'sunsettheme'); ?></p>
+			<p class="no-comments"><?php esc_html_e('Comments are closed.', 'mazdakdev'); ?></p>
 
 		<?php
 		endif;
